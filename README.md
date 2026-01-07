@@ -40,22 +40,24 @@ Ollama 用來在本機跑 LLM（本專題用它提供 HTTP API：`http://127.0.0
 2. 安裝後啟動 Ollama（會在系統列看到圖示）。
 
 
-大概是這樣：
-2-1 確認 Ollama 是否有模型
+### Ollama 的部分：
+1. 首先確認 Ollama 是否有模型
 ```ollama list```
-2-2 如果沒有模型，下載（例：gemma2 2b）
+
+2. 如果沒有模型，下載（例：gemma2 2b）
 ```ollama pull gemma2:2b```
-2-3 開啟 Ollama 服務（Terminal 1）
+
+3. 開啟 Ollama 服務（Terminal 1）
 ```ollama serve```
 這個視窗要一直開著不要關。
-2-4 **注意**:如果執行ollama serve的時候發現到port被占用。請先去右下角工具列，對 Ollama 圖示（一隻羊駝）按右鍵選擇 Quit Ollama。
 
-4. **啟動搜尋引擎 (注意：如果沒有index.pkl，會跑不出結果)**
+**注意**:如果執行ollama serve的時候發現到port被占用。請先去右下角工具列，對 Ollama 圖示（一隻羊駝）按右鍵選擇 Quit Ollama。
+
+**啟動搜尋引擎 (注意：如果沒有index.pkl，會跑不出結果)**
 （Terminal 2）
 先執行app.py，再打開瀏覽器訪問 http://127.0.0.1:5000/ 即可開始搜尋。
-```bash
-python app.py
-```
+```python app.py```
+
 - Terminal 1 跑 `ollama serve`（LLM 服務）  
 - Terminal 2 跑 `python app.py`（Flask 網頁）  
 
