@@ -62,19 +62,20 @@ ollama serve
 **啟動搜尋引擎 (注意：如果沒有index.pkl，會跑不出結果)**
 （Terminal 2）
 先執行app.py，再打開瀏覽器訪問 http://127.0.0.1:5000/ 即可開始搜尋。
+
 ```bash
 python app.py
 ```
 
-- Terminal 1 跑 
+- Terminal 1 跑 LLM 服務
 ```bash
 ollama serve
-```（LLM 服務）
+```
 
-- Terminal 2 跑 
+- Terminal 2 跑 Flask 網頁
 ```bash
 python app.py
-```（Flask 網頁）  
+```  
 
 5. **數據分析 (Optional)**
 若想查看爬蟲結果的統計數據（如網域分佈、總頁數），可執行：
