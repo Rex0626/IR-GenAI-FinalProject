@@ -42,13 +42,19 @@ Ollama 用來在本機跑 LLM（本專題用它提供 HTTP API：`http://127.0.0
 
 ### Ollama 的部分：
 1. 首先確認 Ollama 是否有模型
-```ollama list```
+```bash 
+ollama list
+```
 
 2. 如果沒有模型，下載（例：gemma2 2b）
-```ollama pull gemma2:2b```
+```bash 
+ollama pull gemma2:2b
+```
 
 3. 開啟 Ollama 服務（Terminal 1）
-```ollama serve```
+```bash
+ollama serve
+```
 這個視窗要一直開著不要關。
 
 **注意**:如果執行ollama serve的時候發現到port被占用。請先去右下角工具列，對 Ollama 圖示（一隻羊駝）按右鍵選擇 Quit Ollama。
@@ -56,16 +62,26 @@ Ollama 用來在本機跑 LLM（本專題用它提供 HTTP API：`http://127.0.0
 **啟動搜尋引擎 (注意：如果沒有index.pkl，會跑不出結果)**
 （Terminal 2）
 先執行app.py，再打開瀏覽器訪問 http://127.0.0.1:5000/ 即可開始搜尋。
-```python app.py```
+```bash
+python app.py
+```
 
-- Terminal 1 跑 `ollama serve`（LLM 服務）  
-- Terminal 2 跑 `python app.py`（Flask 網頁）  
+- Terminal 1 跑 
+```bash
+ollama serve
+```（LLM 服務）
+
+- Terminal 2 跑 
+```bash
+python app.py
+```（Flask 網頁）  
 
 5. **數據分析 (Optional)**
 若想查看爬蟲結果的統計數據（如網域分佈、總頁數），可執行：
 ```Bash
 python analyze_data.py
-產生 Prompt A/B 比較結果（Prompt Engineering Analysis）
+```
 terminal(2)
+```bash
 python -u pe_analysis.py
 ```
